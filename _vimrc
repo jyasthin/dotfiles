@@ -1,21 +1,21 @@
-﻿syntax on
-
-
-"---------------------------------------------------------------------------
+﻿"---------------------------------------------------------------------------
 " NeoBundle(プラグイン)
 "
 set nocompatible
-filetype off
 
 if has("vim_starting")
   set runtimepath+=~/.vim/bundle/neobundle.vim/ 
-  call neobundle#rc('~/.vim/bundle/')
-else
 endif
+call neobundle#rc(expand("~/.vim/bundle/"))
 
-NeoBundle 'gmarik/vundle' 
+
+" NeoBundle ***
+"
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 
 " シンタックスチェック ***
+"
 NeoBundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': [], 
@@ -23,7 +23,9 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:syntastic_auto_loc_list = 1 
 let g:syntastic_javascript_checker = 'gjslint'
 
+
 " zencoding ***
+"
 NeoBundle 'mattn/emmet-vim'
 " インデントは半角スペース4個
 let g:user_zen_settings = {
@@ -31,10 +33,19 @@ let g:user_zen_settings = {
       \'indentation' : '    '
       \}
 
+
 " solarized(colorscheme) ***
+"
 NeoBundle 'altercation/vim-colors-solarized'
 
+
 filetype plugin indent on
+
+
+" 起動時にインストールチェックを行う。***
+"
+NeoBundleCheck
+
 
 
 "---------------------------------------------------------------------------
@@ -46,6 +57,7 @@ autocmd FileType html setl shiftwidth=4 softtabstop=4 expandtab
 " 勝手に改行させない
 set formatoptions=q
 set tw=0
+
 
 
 "---------------------------------------------------------------------------
@@ -63,6 +75,8 @@ let g:solarized_visibility='normal'
 syntax enable
 set background=dark
 colorscheme solarized
+
+
 
 "---------------------------------------------------------------------------
 "挿入モード時、ステータスラインの色を変更
