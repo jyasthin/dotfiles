@@ -4,9 +4,9 @@
 set nocompatible
 
 if has("vim_starting")
-  set runtimepath+=~/.vim/bundle/neobundle.vim/ 
+  set runtimepath+=~/dotfiles/vimfiles/bundle/neobundle.vim/ 
 endif
-call neobundle#rc(expand("~/.vim/bundle/"))
+call neobundle#rc(expand("~/dotfiles/vimfiles/bundle/"))
 
 
 " NeoBundle ***
