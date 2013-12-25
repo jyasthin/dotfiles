@@ -54,21 +54,23 @@ NeoBundleCheck
 autocmd FileType javascript setl shiftwidth=4 softtabstop=4 expandtab
 autocmd FileType html setl shiftwidth=4 softtabstop=4 expandtab
 
-" 勝手に改行させない
-set formatoptions=q
-set tw=0
-
 
 "---------------------------------------------------------------------------
 " 編集関連
 "
 set tabstop=4
 
+
 "---------------------------------------------------------------------------
 " 表示関連
+"
 set number
 set laststatus=2
 set cmdheight=1
+
+set nowrap
+
+set cursorline
 
 
 "---------------------------------------------------------------------------
