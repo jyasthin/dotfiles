@@ -10,8 +10,10 @@ call neobundle#rc(expand("~/dotfiles/vimfiles/bundle/"))
 
 
 " NeoBundle ***
-"
-NeoBundleFetch 'Shougo/neobundle.vim'
+" submoduleを使っているのでNeoBundleの管理下から外す 
+" submoduleを使わない(初期にcloneで入れる)のであれば、管理下に入れる
+" 
+"NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " シンタックスチェック ***
