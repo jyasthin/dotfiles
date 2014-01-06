@@ -62,6 +62,9 @@ autocmd FileType html setl shiftwidth=4 softtabstop=4 expandtab
 "
 set tabstop=4
 
+" テキストのtextwidthのデフォルトを解除
+autocmd FileType text setlocal textwidth=0
+
 
 "---------------------------------------------------------------------------
 " 表示関連
