@@ -123,3 +123,25 @@ function! s:GetHighlight(hi)
   let hl = substitute(hl, 'xxx', '', '')
   return hl
 endfunction
+
+
+"---------------------------------------------------------------------------
+" _vimrc,_gvimrcを編集しやすく
+"
+" キーマッピング(Spc+(ev,gv))
+let $MYVIMRC = '$HOME\dotfiles\_vimrc'
+let $MYGVIMRC = '$HOME\dotfiles\_gvimrc'
+nnoremap <silent> <Space>ev :edit $MYVIMRC<CR>
+nnoremap <silent> <Space>eg :edit $MYGVIMRC<CR>
+
+" ファイル(_vimrc,_gvimrc)保存時に自動で再読み込みを行う
+augroup SourceVimrcCmd 
+  autocmd!
+augroup END
+
+if !has('gui_running')
+  autocmd SourceVimrcCmd BufWritePost _vimrc source $MYVIMRC
+else
+  autocmd SourceVimrcCmd BufWritePost _vimrc source $MYVIMRC | source $MYGVIMRC 
+  autocmd SourceVimrcCmd BufWritePost _gvimrc source $MYGVIMRC
+endif
