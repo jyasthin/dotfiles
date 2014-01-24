@@ -51,16 +51,10 @@ NeoBundleCheck
 
 
 "---------------------------------------------------------------------------
-" インデント関連
-"
-autocmd FileType javascript setl shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType html setl shiftwidth=4 softtabstop=4 expandtab
-
-
-"---------------------------------------------------------------------------
 " 編集関連
 "
-set tabstop=4
+set expandtab
+set tabstop=4 shiftwidth=4 softtabstop=0
 
 " テキストのtextwidthのデフォルトを解除
 autocmd FileType text setlocal textwidth=0
