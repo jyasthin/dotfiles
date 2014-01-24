@@ -146,3 +146,11 @@ else
   autocmd SourceVimrcCmd BufWritePost _vimrc source $MYVIMRC | source $MYGVIMRC 
   autocmd SourceVimrcCmd BufWritePost _gvimrc source $MYGVIMRC
 endif
+
+
+"---------------------------------------------------------------------------
+" Todoリストを管理(単なるメモ帳)
+"
+command! Todo edit ~/todo.txt
+command! Memo edit ~/memo.txt
+
