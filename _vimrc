@@ -26,11 +26,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_javascript_checker = 'gjslint'
 
 
-" zencoding ***
+" emmet(zen-coding) ***
 "
 NeoBundle 'mattn/emmet-vim'
 " インデントは半角スペース4個
-let g:user_zen_settings = {
+let g:user_emmet_settings = {
       \'lang' : 'ja',
       \'indentation' : '    '
       \}
