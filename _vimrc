@@ -1,8 +1,11 @@
-﻿set nocompatible
-
+﻿"---------------------------------------------------------------------------
+" NeoBundle(プラグイン)
+"
 let $plugin_base_path = expand('~/dotfiles/vimfiles/bundle/')
 
 if has('vim_starting')
+  set nocompatible
+
   " NeoBundleが無ければ、(ディレクトリ作ってから、)Gitから取得する
   let $neobundle_path = $plugin_base_path.'neobundle.vim'
   if !isdirectory($neobundle_path)
@@ -13,12 +16,7 @@ if has('vim_starting')
   set runtimepath+=$neobundle_path
 endif
 
-
-
-"---------------------------------------------------------------------------
-" NeoBundle(プラグイン)
-"
-call neobundle#rc($plugin_base_path)
+call neobundle#begin($plugin_base_path)
 
 
 " NeoBundle ***
@@ -52,8 +50,9 @@ let g:user_emmet_settings = {
 NeoBundle 'altercation/vim-colors-solarized'
 
 
-filetype plugin indent on
+call neobundle#end()
 
+filetype plugin indent on
 
 " 起動時にインストールチェックを行う。***
 "
