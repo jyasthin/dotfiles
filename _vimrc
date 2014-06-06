@@ -1,19 +1,30 @@
-﻿"---------------------------------------------------------------------------
+﻿set nocompatible
+
+let $plugin_base_path = expand('~/dotfiles/vimfiles/bundle/')
+
+if has('vim_starting')
+  " NeoBundleが無ければ、(ディレクトリ作ってから、)Gitから取得する
+  let $neobundle_path = $plugin_base_path.'neobundle.vim'
+  if !isdirectory($neobundle_path)
+    call system('mkdir '.shellescape($plugin_base_path))
+    call system('git clone https://github.com/Shougo/neobundle.vim.git '.shellescape($neobundle_path))
+  endif
+
+  set runtimepath+=$neobundle_path
+endif
+
+
+
+"---------------------------------------------------------------------------
 " NeoBundle(プラグイン)
 "
-set nocompatible
-
-if has("vim_starting")
-  set runtimepath+=~/dotfiles/vimfiles/bundle/neobundle.vim/ 
-endif
-call neobundle#rc(expand("~/dotfiles/vimfiles/bundle/"))
+call neobundle#rc($plugin_base_path)
 
 
 " NeoBundle ***
-" submoduleを使っているのでNeoBundleの管理下から外す 
-" submoduleを使わない(初期にcloneで入れる)のであれば、管理下に入れる
-" 
-"NeoBundleFetch 'Shougo/neobundle.vim'
+"
+" 自分自身を管理する
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 
 " シンタックスチェック ***
