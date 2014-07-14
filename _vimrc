@@ -143,8 +143,8 @@ endfunction
 " _vimrc,_gvimrcを編集しやすく
 "
 " キーマッピング(Spc+(ev,gv))
-let $MYVIMRC = '$HOME\dotfiles\_vimrc'
-let $MYGVIMRC = '$HOME\dotfiles\_gvimrc'
+let $MYVIMRC = '$HOME/dotfiles/_vimrc'
+let $MYGVIMRC = '$HOME/dotfiles/_gvimrc'
 nnoremap <silent> <Space>ev :edit $MYVIMRC<CR>
 nnoremap <silent> <Space>eg :edit $MYGVIMRC<CR>
 
