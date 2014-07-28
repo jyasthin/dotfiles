@@ -96,7 +96,7 @@ set fenc=utf-8
 "
 set nobackup
 set noswapfile
-
+set noundofile
 
 "---------------------------------------------------------------------------
 " 色関連(colorscheme)
