@@ -45,6 +45,11 @@ let g:user_emmet_settings = {
       \}
 
 
+" surround
+"
+NeoBundle 'tpope/vim-surround'
+
+
 " solarized(colorscheme) ***
 "
 NeoBundle 'altercation/vim-colors-solarized'
