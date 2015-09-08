@@ -76,6 +76,9 @@ autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+" 補完リストの高さを固定
+set pumheight=10
+
 
 " solarized(colorscheme) ***
 "
