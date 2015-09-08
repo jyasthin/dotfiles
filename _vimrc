@@ -101,8 +101,8 @@ set tabstop=4 shiftwidth=4 softtabstop=0
 " テキストのtextwidthのデフォルトを解除
 autocmd FileType text setlocal textwidth=0
 
-" htmlについて、インデントを行うようにする
-:let g:html_indent_inctags = "html,body,head,tbody"
+" html,body,head,tbodyについて、インデントを行うようにする
+let g:html_indent_inctags = "html,body,head,tbody"
 
 
 "---------------------------------------------------------------------------
