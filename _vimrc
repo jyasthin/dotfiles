@@ -50,6 +50,33 @@ let g:user_emmet_settings = {
 NeoBundle 'tpope/vim-surround'
 
 
+" neocomplete
+"
+NeoBundle 'Shougo/neocomplete.vim'
+" 有効化
+let g:neocomplete#enable_at_startup = 1
+" 大文字が入力されるまで大文字/小文字の別を無視する
+let g:neocomplete#enable_smart_case = 1
+
+" エンターキーで候補リストを閉じるだけにする
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
+  " 改行も挿入する場合は以下
+  " return neocomplete#close_popup() . "\<CR>"
+endfunction
+
+" タブキーで選択を行う(Tabで下にShift+Tabで上に)
+inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" オムニ補完を行う
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+
 " solarized(colorscheme) ***
 "
 NeoBundle 'altercation/vim-colors-solarized'
