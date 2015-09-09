@@ -29,10 +29,15 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "
 NeoBundle 'scrooloose/syntastic'
 let g:syntastic_mode_map = { 'mode': 'passive',
-      \ 'active_filetypes': [], 
+      \ 'active_filetypes': ['javascript'], 
       \ 'passive_filetypes': ['html', 'css'] }
-let g:syntastic_auto_loc_list = 1 
-let g:syntastic_javascript_checker = 'gjslint'
+
+" eslintは npm install -g eslint で導入し、jsと同じディレクトリで eslint --init を行う
+" TODO: ホームディレクトリに .eslintrc を置けばグローバル的にやってくれるようなので、dotfileで管理する
+let g:syntastic_javascript_checkers = ['eslint']
+
+" 保存終了(wq)時にはチェックを行わない
+let g:syntastic_check_on_wq = 0 
 
 
 " emmet(zen-coding) ***
