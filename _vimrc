@@ -36,6 +36,9 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 " TODO: ホームディレクトリに .eslintrc を置けばグローバル的にやってくれるようなので、dotfileで管理する
 let g:syntastic_javascript_checkers = ['eslint']
 
+" チェック後に常にLocationListを更新するようにする
+let g:syntastic_always_populate_loc_list = 1
+
 " 保存終了(wq)時にはチェックを行わない
 let g:syntastic_check_on_wq = 0 
 
