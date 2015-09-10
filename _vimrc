@@ -21,13 +21,15 @@ call neobundle#begin($plugin_base_path)
 
 " NeoBundle ***
 "
+
 " 自分自身を管理する
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 
-" シンタックスチェック ***
+" Syntastic ***
 "
 NeoBundle 'scrooloose/syntastic'
+
 let g:syntastic_mode_map = { 'mode': 'passive',
       \ 'active_filetypes': ['javascript'], 
       \ 'passive_filetypes': ['html', 'css'] }
@@ -46,6 +48,7 @@ let g:syntastic_check_on_wq = 0
 " emmet(zen-coding) ***
 "
 NeoBundle 'mattn/emmet-vim'
+
 " インデントは半角スペース4個
 let g:user_emmet_settings = {
       \'lang' : 'ja',
@@ -53,14 +56,15 @@ let g:user_emmet_settings = {
       \}
 
 
-" surround
+" surround ***
 "
 NeoBundle 'tpope/vim-surround'
 
 
-" neocomplete
+" neocomplete ***
 "
 NeoBundle 'Shougo/neocomplete.vim'
+
 " 有効化
 let g:neocomplete#enable_at_startup = 1
 " 大文字が入力されるまで大文字/小文字の別を無視する
@@ -96,6 +100,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 call neobundle#end()
 
 filetype plugin indent on
+
 
 " 起動時にインストールチェックを行う。***
 "
