@@ -26,6 +26,19 @@ call neobundle#begin($plugin_base_path)
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 
+" vimfiler ***
+"
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler'
+
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+
+" キーマッピング
+"   vimfilerをIDE風(左:ファイルペイン/右:ファイルコンテンツペイン)に開く
+nnoremap <silent> <Space>fi :VimFilerBufferDir -split -simple -winwidth=45 -no-quit<CR>
+
+
 " Syntastic ***
 "
 NeoBundle 'scrooloose/syntastic'
