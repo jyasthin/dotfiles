@@ -1,0 +1,32 @@
+[core]
+    fscache = true
+    quotepath = false
+    editor = \"C:/Program Files/vim/gvim.exe\" -f 
+
+[push]
+    default = simple
+
+[merge]
+    tool = WinMerge
+[mergetool]
+    prompt = false
+[mergetool "WinMerge"]
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -r -ub -wl -wr -dl \"Base\" -dm \"Merged\" -dr \"Mine\" \"$LOCAL\" \"BASE\" \"$REMOTE\" -o \"MERGED\"
+    trustExitCode = false
+
+[diff]
+    tool = WinMerge
+    guitool = WinMerge
+[difftool]
+    prompt = false
+[difftool "WinMerge"]
+    path = C:/Program Files/WinMerge/WinMergeU.exe
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e -r -ub -wl -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\"
+    trustExitCode = false
+
+[alias]
+    dr = difftool -d
+
+[user]
+	name = jyasthin
+	email = jyasthin@gmail.com
