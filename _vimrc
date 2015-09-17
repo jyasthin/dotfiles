@@ -105,6 +105,13 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 set pumheight=10
 
 
+" choosewin ***
+NeoBundle 't9md/vim-choosewin'
+
+nmap - <Plug>(choosewin)
+
+
+
 " solarized(colorscheme) ***
 "
 NeoBundle 'altercation/vim-colors-solarized'
