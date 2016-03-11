@@ -106,10 +106,18 @@ set pumheight=10
 
 
 " choosewin ***
+"
 NeoBundle 't9md/vim-choosewin'
 
 nmap - <Plug>(choosewin)
 
+
+" open-browser ***
+"
+NeoBundle 'tyru/open-browser.vim'
+
+nmap gs <Plug>(openbrowser-smart-search)
+vmap gs <Plug>(openbrowser-smart-search)
 
 
 " solarized(colorscheme) ***
