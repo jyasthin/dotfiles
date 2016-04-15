@@ -2,12 +2,17 @@
     fscache = true
     quotepath = false
     editor = \"C:/Program Files/vim/gvim.exe\" -f 
+	autocrlf = true
 
 [push]
     default = simple
+    
+[pull]
+    ff = only
 
 [merge]
     tool = WinMerge
+	ff = false
 [mergetool]
     prompt = false
 [mergetool "WinMerge"]
