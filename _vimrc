@@ -144,10 +144,21 @@ NeoBundleCheck
 "---------------------------------------------------------------------------
 " 編集関連
 "
+
+" インデント 
 set expandtab
 set tabstop=4 shiftwidth=4 softtabstop=0
 
-" テキストのtextwidthのデフォルトを解除
+augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.html setlocal tabstop=4 shiftwidth=4 softtabstop=0
+  autocmd BufNewFile,BufRead *.js setlocal tabstop=2 shiftwidth=2 softtabstop=0
+  autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 shiftwidth=2 softtabstop=0
+  autocmd BufNewFile,BufRead *.css setlocal tabstop=2 shiftwidth=2 softtabstop=0
+  autocmd BufNewFile,BufRead *.json setlocal tabstop=2 shiftwidth=2 softtabstop=0
+augroup END
+
+" テキストのtextwidthのデフォルトを解除(=自動改行を行わないようにしている)
 autocmd FileType text setlocal textwidth=0
 
 " html,body,head,tbodyについて、インデントを行うようにする
