@@ -16,7 +16,7 @@
 [mergetool]
     prompt = false
 [mergetool "WinMerge"]
-    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -r -ub -wl -wr -dl \"Base\" -dm \"Merged\" -dr \"Mine\" \"$LOCAL\" \"BASE\" \"$REMOTE\" -o \"MERGED\"
+    cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -r -ub -wl -wr -dl \"Base\" -dm \"Merged\" -dr \"Mine\" \"$LOCAL\" \"$BASE\" \"$REMOTE\" -o \"$MERGED\"
     trustExitCode = false
 
 [diff]
