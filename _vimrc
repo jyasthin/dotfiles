@@ -58,6 +58,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_check_on_wq = 0 
 
 
+" vim-yaml ***
+NeoBundle 'stephpy/vim-yaml'
+
+
 " emmet(zen-coding) ***
 "
 NeoBundle 'mattn/emmet-vim'
@@ -156,6 +160,7 @@ augroup fileTypeIndent
   autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 shiftwidth=2 softtabstop=0
   autocmd BufNewFile,BufRead *.css setlocal tabstop=2 shiftwidth=2 softtabstop=0
   autocmd BufNewFile,BufRead *.json setlocal tabstop=2 shiftwidth=2 softtabstop=0
+  autocmd BufNewFile,BufRead *.yaml setlocal tabstop=2 shiftwidth=2 softtabstop=0
 augroup END
 
 " テキストのtextwidthのデフォルトを解除(=自動改行を行わないようにしている)
