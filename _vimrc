@@ -26,7 +26,7 @@ call neobundle#begin($plugin_base_path)
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 
-" vimfiler ***
+" unite/vimfiler ***
 "
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/vimfiler'
@@ -66,10 +66,10 @@ NeoBundle 'stephpy/vim-yaml'
 "
 NeoBundle 'mattn/emmet-vim'
 
-" インデントは半角スペース4個
+" インデントは半角スペース2個
 let g:user_emmet_settings = {
       \'lang' : 'ja',
-      \'indentation' : '    '
+      \'indentation' : '  '
       \}
 
 
@@ -155,7 +155,7 @@ set tabstop=4 shiftwidth=4 softtabstop=0
 
 augroup fileTypeIndent
   autocmd!
-  autocmd BufNewFile,BufRead *.html setlocal tabstop=4 shiftwidth=4 softtabstop=0
+  autocmd BufNewFile,BufRead *.html setlocal tabstop=2 shiftwidth=2 softtabstop=0
   autocmd BufNewFile,BufRead *.js setlocal tabstop=2 shiftwidth=2 softtabstop=0
   autocmd BufNewFile,BufRead *.jsx setlocal tabstop=2 shiftwidth=2 softtabstop=0
   autocmd BufNewFile,BufRead *.css setlocal tabstop=2 shiftwidth=2 softtabstop=0
